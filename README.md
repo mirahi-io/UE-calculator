@@ -10,24 +10,24 @@ Vous avez surement l'habitude d'exécuter du JavaScript sur votre ordinateur dan
 Un des outils que nous allons utiliser est Node (ou NodeJS) qui vas nous permettre d'exécuter du javascript en dehors d'un navigateur.
 Il est basé sur le moteur JavaScript de chrome.
 
-Pour l'installer cliquez [https://nodejs.org/en/](ici)
+Pour l'installer cliquez (ici)(https://nodejs.org/en/)
 
 Yarn est le gestionnaire un gestionnaire de paquets pour Node. Il en existe d'autres mais il est déconseillé de les mélanger dans le même projet.
-Vous pouvez l'installer [https://classic.yarnpkg.com/en/docs/install](ici)
+Vous pouvez l'installer [ici](https://classic.yarnpkg.com/en/docs/install)
 
 Pour les habitué de Python on pourrais comparer `node` à la commande `python` ou `python3` et `yarn` à la commande `pip`
 
 ### L'éditeur de code
 
-Si vous ne l'avez pas déjà installé, nous vous conseillons fortement [https://code.visualstudio.com/](Visual Studio Code).
-Ensuite nous vous conseillons d'installer [https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode](l'extension Prettier) qui vous permet en un seul clique de formatter votre code et de le rendre lisible.
+Si vous ne l'avez pas déjà installé, nous vous conseillons fortement [Visual Studio Code](https://code.visualstudio.com/) .
+Ensuite nous vous conseillons d'installer [l'extension Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) qui vous permet en un seul clique de formatter votre code et de le rendre lisible.
 
 ## Lancez l'app
 
 Une fois votre environement préparé, vous pouvez cloner ce repo (`git clone https://github.com/mirahi-io/UE-calculator.git`).
 Pour installer les dépendances (c'est à dire les différentes librairies utilisée dans ce projet) vous pouvez lancer la comande `yarn install` à la racine du projet.
 Yarn va alors installer toutes ces dépendances dans le dossier `.node_modules`.
-Lors que l'installation est terminée vous pouvez lancer le projet avec `yarn start` et accéder à votre page web sur [http://localhost:3000]
+Lors que l'installation est terminée vous pouvez lancer le projet avec `yarn start` et accéder à votre page web sur (http://localhost:3000)
 
 ### Structure du projet
 
@@ -45,22 +45,22 @@ Tous ces exercices ont pour but de vous apprendre React, il ne sera donc pas né
 
 ### Exercice 1
 
-Si vous comparez avec l'exemple finalise ([https://ue-calc.netlify.app/]), vous remarquerez que vous n'avez pas la possiblité d'ajouter un cours à la liste.
+Si vous comparez avec l'exemple finalise ((https://ue-calc.netlify.app/)), vous remarquerez que vous n'avez pas la possiblité d'ajouter un cours à la liste.
 
 Allez dans le point d'entrée de notre application, c'est à dire le fichier `App.jsx` et analysez la façon dont les compostants `Results`et `CoursesList` sont utilisés. essayez d'appliquer cette méthode au composant manquant.
 
-<details>
+<spoiler>
 #### Notes
 
 Remarques qu'en React nous utilisons `className` au lieux de `class`. Avez vous une idée de la raison ?
 
-<details>
+<spoiler>
 En JavaScript le mot `class` est un mot clé utilisé pour déclarrer une classe, nous ne pouvons donc pas l'utiliser pour autre chose.
-</details>
+</spoiler>
 
 En React les composants commençant par des majuscules sont des composants React importé d'un fichier, tandis que les composant commencant par des minuscule sont des composant classique html.''
 
-</details>
+</spoiler>
 
 ### Exercice 2
 
@@ -68,23 +68,23 @@ Maintenant que le composant s'affiche, vous remarquerez que celui-ci n'est pas f
 
 Essayez de comprendre la ligne `const { addCourse, courses } = props` et de solutionner ce probleme.
 
-<details>
+<spoiler>
 #### Indice
 
 Les props (raccourci pour _properties_ ou propriétés) sont les "argument" qui sont passés au composants. De la même manière que vous pouvez passer un `class` à un composant html, en React vous pouvez passer tous types de propriétés à un composant
 
-</details>
+</spoiler>
 
 ### Exercice 3
 
 Essayez maintenant d'ajouter un cours à votre liste, vous verrez qu'il s'affiche bien, sauf pour le nom. Investiguez dans le fichier `CourseCard.jsx` pour trouver la raison
 
-<details>
+<spoiler>
 #### Indice
 
 Inspirez vous de la façon dont `points` et `percents` sont importé dans le JSX.
 
-</details>
+</spoiler>
 
 ### Exercice 4
 
@@ -117,14 +117,14 @@ Hey oui tout fonctionne, mais si tu as encore du temps regarde comment utiliser 
 
 ## Mise en production.
 
-<details>
+<spoiler>
 #### Astuce
 
 Si tu n'as pas pu suivre c'est pas grave, tu aura tout le temps de refaire les exercices une autre fois. Tu peux trouver la solution simplement en allant voir ma branche avec la commande `git checkout solution`.
 
 Pour ne pas perdre tes modification je te conseille de les _commiter_ avant d'aller voir ma branche.
 
-</details>
+</spoiler>
 
 ### Ajout sur GiHhub
 
