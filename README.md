@@ -81,7 +81,7 @@ Les props (raccourci pour _properties_ ou propriétés) sont les "argument" qui 
 Essayez maintenant d'ajouter un cours à votre liste, vous verrez qu'il s'affiche bien, sauf pour le nom. Investiguez dans le fichier `CourseCard.jsx` pour trouver la raison
 
 <details>
-<summary>Indice</summary>
+<summary>Indice ex3</summary>
 
 Inspirez vous de la façon dont `points` et `percents` sont importé dans le JSX.
 
@@ -94,7 +94,9 @@ Pour résoudre ceci nous allons devoir investiguer le fichier `CoursesList.jsx` 
 Cherchez une solution pour le charger un nombre de fois qui correspond à la longueur du tableau `courses` venant des props.
 
 <detail>
-<summary>Indice</summary>
+<summary>Indice ex4</summary>
+
+Comme pour l'ajout de la variable `name` dans l'exercice précédent, il est possible d'ajouter un tableau de composants directement dans le JSX. Pour celà l'utilisation de la fonction `.map` vous sera utile.
 
 Notez qu'il est préférable que chaque élément JSX du tableau possède une porpriété `key` unique, celà permet à React d'optimiser le nombre de rendus.
 
@@ -105,7 +107,7 @@ Notez qu'il est préférable que chaque élément JSX du tableau possède une po
 Il est enfin l'heure de faire fonctionner le résultat. Rendez-vous dans le fichier `Results.jsx`, en vous inspirant de la façon dont fonctionne le fonction `useState` dans `App.jsx` essayer de corriger la dernière erreur.
 
 <detail>
-<summary>Indice</summary>
+<summary>Indice ex5</summary>
 La valeur `() => {}` indique simplement une fonction vide, comme pourrais l'être `function() { }`
 
 La fonction `useState` retourne un tableau donc la première valeur est l'élément du state, et la seconde est la fonction permettant de le changer. En effet React à besoin qu'une fonction spécifique soit utilisée plutôt qu'un simple réassignement classique comme `requiredPoints = 18`, celà viens du faite que React à besoin de savoirs quand une variable du state est modifiéé pour pouvoir re-exécuter le rendu des compostants qui en dépendent (et uniquement de ceux-ci !!)
