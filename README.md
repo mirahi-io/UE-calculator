@@ -96,7 +96,6 @@ Cherchez une solution pour le charger un nombre de fois qui correspond à la lon
 <detail>
 <summary>Indice</summary>
 
-Comme pour l'ajout de la variable `name` dans l'exercice précédent, il est possible d'ajouter un tableau de composants directement dans le JSX. Pour celà l'utilisation de la fonction `.map` vous sera utile.
 Notez qu'il est préférable que chaque élément JSX du tableau possède une porpriété `key` unique, celà permet à React d'optimiser le nombre de rendus.
 
 </detail>
@@ -108,6 +107,7 @@ Il est enfin l'heure de faire fonctionner le résultat. Rendez-vous dans le fich
 <detail>
 <summary>Indice</summary>
 La valeur `() => {}` indique simplement une fonction vide, comme pourrais l'être `function() { }`
+
 La fonction `useState` retourne un tableau donc la première valeur est l'élément du state, et la seconde est la fonction permettant de le changer. En effet React à besoin qu'une fonction spécifique soit utilisée plutôt qu'un simple réassignement classique comme `requiredPoints = 18`, celà viens du faite que React à besoin de savoirs quand une variable du state est modifiéé pour pouvoir re-exécuter le rendu des compostants qui en dépendent (et uniquement de ceux-ci !!)
 
 </detail>
