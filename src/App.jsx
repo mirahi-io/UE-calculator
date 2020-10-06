@@ -11,11 +11,9 @@ const App = () => {
 
   const [quote, setQuote] = useState("");
 
-  useEffect(() => {
-    axios
-      .get("https://api.kanye.rest/?format=json")
-      .then((response) => setQuote(response.data.quote));
-  }, []);
+  // axios
+  //   .get("https://api.kanye.rest/?format=json")
+  //   .then((response) => setQuote(response.data.quote));
 
   return (
     <div className="container">
