@@ -10,7 +10,7 @@ Vous avez surement l'habitude d'exécuter du JavaScript sur votre ordinateur dan
 Un des outils que nous allons utiliser est Node (ou NodeJS) qui vas nous permettre d'exécuter du javascript en dehors d'un navigateur.
 Il est basé sur le moteur JavaScript de chrome.
 
-Pour l'installer cliquez (ici)(https://nodejs.org/en/)
+Pour l'installer cliquez [ici](https://nodejs.org/en/)
 
 Yarn est le gestionnaire un gestionnaire de paquets pour Node. Il en existe d'autres mais il est déconseillé de les mélanger dans le même projet.
 Vous pouvez l'installer [ici](https://classic.yarnpkg.com/en/docs/install)
@@ -45,22 +45,23 @@ Tous ces exercices ont pour but de vous apprendre React, il ne sera donc pas né
 
 ### Exercice 1
 
-Si vous comparez avec l'exemple finalise ((https://ue-calc.netlify.app/)), vous remarquerez que vous n'avez pas la possiblité d'ajouter un cours à la liste.
+Si vous comparez avec l'exemple finalise (https://ue-calc.netlify.app/), vous remarquerez que vous n'avez pas la possiblité d'ajouter un cours à la liste.
 
 Allez dans le point d'entrée de notre application, c'est à dire le fichier `App.jsx` et analysez la façon dont les compostants `Results`et `CoursesList` sont utilisés. essayez d'appliquer cette méthode au composant manquant.
 
-<spoiler>
-#### Notes
+<details>
+  <summary>Notes</summary>
 
 Remarques qu'en React nous utilisons `className` au lieux de `class`. Avez vous une idée de la raison ?
 
-<spoiler>
+<details>
+  <summary>Réponse</summary>
 En JavaScript le mot `class` est un mot clé utilisé pour déclarrer une classe, nous ne pouvons donc pas l'utiliser pour autre chose.
-</spoiler>
+</details>
 
 En React les composants commençant par des majuscules sont des composants React importé d'un fichier, tandis que les composant commencant par des minuscule sont des composant classique html.''
 
-</spoiler>
+</details>
 
 ### Exercice 2
 
@@ -68,23 +69,23 @@ Maintenant que le composant s'affiche, vous remarquerez que celui-ci n'est pas f
 
 Essayez de comprendre la ligne `const { addCourse, courses } = props` et de solutionner ce probleme.
 
-<spoiler>
-#### Indice
+<details>
+  <summary>Indice</summary>
 
 Les props (raccourci pour _properties_ ou propriétés) sont les "argument" qui sont passés au composants. De la même manière que vous pouvez passer un `class` à un composant html, en React vous pouvez passer tous types de propriétés à un composant
 
-</spoiler>
+</details>
 
 ### Exercice 3
 
 Essayez maintenant d'ajouter un cours à votre liste, vous verrez qu'il s'affiche bien, sauf pour le nom. Investiguez dans le fichier `CourseCard.jsx` pour trouver la raison
 
-<spoiler>
-#### Indice
+<details>
+  <summary>Indice</summary>
 
 Inspirez vous de la façon dont `points` et `percents` sont importé dans le JSX.
 
-</spoiler>
+</details>
 
 ### Exercice 4
 
@@ -117,14 +118,13 @@ Hey oui tout fonctionne, mais si tu as encore du temps regarde comment utiliser 
 
 ## Mise en production.
 
-<spoiler>
-#### Astuce
-
+<details>
+  <summary>Astuce</summary>
 Si tu n'as pas pu suivre c'est pas grave, tu aura tout le temps de refaire les exercices une autre fois. Tu peux trouver la solution simplement en allant voir ma branche avec la commande `git checkout solution`.
 
 Pour ne pas perdre tes modification je te conseille de les _commiter_ avant d'aller voir ma branche.
 
-</spoiler>
+</details>
 
 ### Ajout sur GiHhub
 
