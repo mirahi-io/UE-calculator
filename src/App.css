@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Brandon Grotesque Medium";
+  src: url("./assets/fonts/BrandonGrotesque-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Light";
+  src: url("./assets/fonts/BrandonGrotesque-Light.ttf") format("truetype");
+  font-weight: ligth;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Light";
+  src: url("./assets/fonts/BrandonGrotesque-LightItalic.ttf") format("truetype");
+  font-weight: light;
+  font-style: italic;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #202020;
+  padding: 20px;
+  color: whitesmoke;
+  font-family: "Brandon Grotesque Light";
+}
+
+button {
+  background: whitesmoke;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  font-size: larger;
+}
+
+form {
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  min-width: 400px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+form p {
+  color: red;
+  margin-top: 3px;
+}
+
+.horizontal {
+  flex-direction: row;
+}
+
+body {
+  margin: 0;
+}
