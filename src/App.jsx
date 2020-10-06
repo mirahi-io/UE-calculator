@@ -11,6 +11,7 @@ const App = () => {
     <div className="container">
       <Results courses={courses} />
       <CoursesList courses={courses} />
+      <AddCourseForm addCourse={addCourse} courses={courses} />
     </div>
   );
 };
