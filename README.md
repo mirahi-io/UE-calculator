@@ -127,6 +127,8 @@ Netlify est une plateforme permettant de mettre en ligne gratuitement ton site w
 
 Pour t'y inscrire vas sur [https://app.netlify.com/] et connecte toi avec GitHub. Tu peux ensuite cliquer sur _New Site from Git_ et lui donner accès au bon repo, Netlify va automatiquement détecter les réglages de ton projet, tu peux faire suivant. Attent ensuite quelques minutes que le site ai fini de compiler et il sera accessible au lien en haut de la page !
 
+Et le mieux ? À chaque fois que tu _push_ un nouveau _commit_ sur ton repo GitHub, Netlify le détecte et essaira de recompiler ton appliation et de mettre la mise à jour en ligne aussi vite que possible.
+
 <br/>
 
 Voilà ce petit tutoriel est fini, j'espère que tu te seras bien amusé et surtout que tu aura bien appris. Si tu as des question, des suggestion ou autre n'hésite pas à me contater à tim@mirahi.io ;)
