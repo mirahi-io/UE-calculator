@@ -22,6 +22,7 @@ const App = () => {
       <Results courses={courses} />
       <CoursesList courses={courses} />
       <AddCourseForm addCourse={addCourse} courses={courses} />
+      <p className="bottom">La citation de Kanye:</p>
       <p>{quote}</p>
     </div>
   );
