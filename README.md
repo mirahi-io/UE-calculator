@@ -50,14 +50,14 @@ Si vous comparez avec l'exemple finalise (https://ue-calc.netlify.app/), vous re
 Allez dans le point d'entrée de notre application, c'est à dire le fichier `App.jsx` et analysez la façon dont les compostants `Results`et `CoursesList` sont utilisés. essayez d'appliquer cette méthode au composant manquant.
 
 <details>
-  <summary>Notes</summary>
+<summary>Notes</summary>
 
 En React les composants commençant par des majuscules sont des composants React importé d'un fichier, tandis que les composant commencant par des minuscule sont des composant classique html.
 
 Remarques qu'en React nous utilisons `className` au lieux de `class`. Avez vous une idée de la raison ?
 
 <details>
-  <summary>Réponse</summary>
+<summary>Réponse</summary>
 En JavaScript le mot `class` est un mot clé utilisé pour déclarrer une classe, nous ne pouvons donc pas l'utiliser pour autre chose.
 </details>
 
@@ -70,7 +70,7 @@ Maintenant que le composant s'affiche, vous remarquerez que celui-ci n'est pas f
 Essayez de comprendre la ligne `const { addCourse, courses } = props` et de solutionner ce probleme.
 
 <details>
-  <summary>Indice</summary>
+<summary>Indice</summary>
 
 Les props (raccourci pour _properties_ ou propriétés) sont les "argument" qui sont passés au composants. De la même manière que vous pouvez passer un `class` à un composant html, en React vous pouvez passer tous types de propriétés à un composant
 
@@ -81,7 +81,7 @@ Les props (raccourci pour _properties_ ou propriétés) sont les "argument" qui 
 Essayez maintenant d'ajouter un cours à votre liste, vous verrez qu'il s'affiche bien, sauf pour le nom. Investiguez dans le fichier `CourseCard.jsx` pour trouver la raison
 
 <details>
-  <summary>Indice</summary>
+<summary>Indice</summary>
 
 Inspirez vous de la façon dont `points` et `percents` sont importé dans le JSX.
 
@@ -94,7 +94,7 @@ Pour résoudre ceci nous allons devoir investiguer le fichier `CoursesList.jsx` 
 Cherchez une solution pour le charger un nombre de fois qui correspond à la longueur du tableau `courses` venant des props.
 
 <detail>
-  <summary>Indice</summary>
+<summary>Indice</summary>
 
 Comme pour l'ajout de la variable `name` dans l'exercice précédent, il est possible d'ajouter un tableau de composants directement dans le JSX. Pour celà l'utilisation de la fonction `.map` vous sera utile.
 
@@ -107,7 +107,7 @@ Notez qu'il est préférable que chaque élément JSX du tableau possède une po
 Il est enfin l'heure de faire fonctionner le résultat. Rendez-vous dans le fichier `Results.jsx`, en vous inspirant de la façon dont fonctionne le fonction `useState` dans `App.jsx` essayer de corriger la dernière erreur.
 
 <detail>
-      <summary>Indice</summary>
+<summary>Indice</summary>
 La valeur `() => {}` indique simplement une fonction vide, comme pourrais l'être `function() { }`
 
 La fonction `useState` retourne un tableau donc la première valeur est l'élément du state, et la seconde est la fonction permettant de le changer. En effet React à besoin qu'une fonction spécifique soit utilisée plutôt qu'un simple réassignement classique comme `requiredPoints = 18`, celà viens du faite que React à besoin de savoirs quand une variable du state est modifiéé pour pouvoir re-exécuter le rendu des compostants qui en dépendent (et uniquement de ceux-ci !!)
@@ -121,7 +121,7 @@ Hey oui tout fonctionne, mais si tu as encore du temps regarde comment utiliser 
 ## Mise en production.
 
 <details>
-  <summary>Astuce</summary>
+<summary>Astuce</summary>
 Si tu n'as pas pu suivre c'est pas grave, tu aura tout le temps de refaire les exercices une autre fois. Tu peux trouver la solution simplement en allant voir ma branche avec la commande `git checkout solution`.
 
 Pour ne pas perdre tes modification je te conseille de les _commiter_ avant d'aller voir ma branche.
