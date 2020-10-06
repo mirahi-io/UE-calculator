@@ -117,6 +117,15 @@ Hey oui tout fonctionne, mais si tu as encore du temps regarde comment utiliser 
 
 ## Mise en production.
 
+<details>
+#### Astuce
+
+Si tu n'as pas pu suivre c'est pas grave, tu aura tout le temps de refaire les exercices une autre fois. Tu peux trouver la solution simplement en allant voir ma branche avec la commande `git checkout solution`.
+
+Pour ne pas perdre tes modification je te conseille de les _commiter_ avant d'aller voir ma branche.
+
+</details>
+
 ### Ajout sur GiHhub
 
 Maintenant que tout fonctionne, tu peux crée un nouveau repo sur GitHub et y _push_ ton projet. N'oublie pas de rajouter `--force` à la commane `git remote add origin` pour forcer git à utiliser ton repo et pas le notre.
