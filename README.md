@@ -1,6 +1,6 @@
 # UE Calculator
 
-Pour l'introduction à React liée au cours de Mr Tricarico, professeur à la HeH. Nous allons créyer ensemble une application permettant de calculer le nombre de point a faire pour passer une UE en connaissant les points du reste des AA. Pour un exemple fonctionnel, vous pouvez visiter [https://ue-calc.netlify.app/].
+Pour l'introduction à React liée au cours de Mr Tricarico, professeur à la HeH. Nous allons créer ensemble une application permettant de calculer le nombre de point a faire pour passer une UE en connaissant les points du reste des AA. Pour un exemple fonctionnel, vous pouvez visiter [https://ue-calc.netlify.app/].
 
 ## Démarrez
 
@@ -12,10 +12,10 @@ Il est basé sur le moteur JavaScript de chrome.
 
 Pour l'installer cliquez [ici](https://nodejs.org/en/)
 
-Yarn est le gestionnaire un gestionnaire de paquets pour Node. Il en existe d'autres mais il est déconseillé de les mélanger dans le même projet.
+Yarn est le gestionnaire de paquets pour Node. Il en existe d'autres mais il est déconseillé de les mélanger dans un même projet.
 Vous pouvez l'installer [ici](https://classic.yarnpkg.com/en/docs/install)
 
-Pour les habitué de Python on pourrais comparer `node` à la commande `python` ou `python3` et `yarn` à la commande `pip`
+Pour les habitué de Python on pourrais comparer `node` à la commande `python` ou `python3` et `yarn` à la commande `pip`.
 
 ### L'éditeur de code
 
@@ -27,7 +27,7 @@ Ensuite nous vous conseillons d'installer [l'extension Prettier](https://marketp
 Une fois votre environement préparé, vous pouvez cloner ce repo (`git clone https://github.com/mirahi-io/UE-calculator.git`).
 Pour installer les dépendances (c'est à dire les différentes librairies utilisée dans ce projet) vous pouvez lancer la comande `yarn install` à la racine du projet.
 Yarn va alors installer toutes ces dépendances dans le dossier `.node_modules`.
-Lors que l'installation est terminée vous pouvez lancer le projet avec `yarn start` et accéder à votre page web sur (http://localhost:3000)
+Lors que l'installation est terminée vous pouvez lancer le projet avec `yarn start` et accéder à votre page web sur http://localhost:3000
 
 ### Structure du projet
 
@@ -45,7 +45,7 @@ Tous ces exercices ont pour but de vous apprendre React, il ne sera donc pas né
 
 ### Exercice 1
 
-Si vous comparez avec l'exemple finalise (https://ue-calc.netlify.app/), vous remarquerez que vous n'avez pas la possiblité d'ajouter un cours à la liste.
+Si vous comparez avec l'exemple complété (https://ue-calc.netlify.app/), vous remarquerez que vous n'avez pas la possiblité d'ajouter un cours à la liste.
 
 Allez dans le point d'entrée de notre application, c'est à dire le fichier `App.jsx` et analysez la façon dont les compostants `Results`et `CoursesList` sont utilisés. essayez d'appliquer cette méthode au composant manquant.
 
