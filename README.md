@@ -52,14 +52,14 @@ Allez dans le point d'entrée de notre application, c'est à dire le fichier `Ap
 <details>
   <summary>Notes</summary>
 
+En React les composants commençant par des majuscules sont des composants React importé d'un fichier, tandis que les composant commencant par des minuscule sont des composant classique html.
+
 Remarques qu'en React nous utilisons `className` au lieux de `class`. Avez vous une idée de la raison ?
 
 <details>
   <summary>Réponse</summary>
 En JavaScript le mot `class` est un mot clé utilisé pour déclarrer une classe, nous ne pouvons donc pas l'utiliser pour autre chose.
 </details>
-
-En React les composants commençant par des majuscules sont des composants React importé d'un fichier, tandis que les composant commencant par des minuscule sont des composant classique html.''
 
 </details>
 
