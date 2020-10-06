@@ -9,10 +9,7 @@ const CoursesList = ({ courses }) => {
 
   return (
     <section>
-      {courses.map((course) => (
-        <CourseCard course={course} key={course.name} />
-      ))}
-      {/* <CourseCard course={courses[0]} key={courses[0].name} />*/}
+      <CourseCard course={courses[0]} key={courses[0].name} />
     </section>
   );
 };

@@ -6,7 +6,7 @@ const CourseCard = ({ course }) => {
   return (
     <div className="card">
       <div className="name">
-        <p>{name}</p>
+        <p>name</p>
       </div>
       <div className="vertical">
         <p className="points">

@@ -2,12 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Results.css";
 
 const Results = ({ courses }) => {
-  // const [requiredPoints, setRequiredPoints] = [10, () => {}];
-  const [requiredPoints, setRequiredPoints] = useState(10);
+  const [requiredPoints, setRequiredPoints] = [10, () => {}];
 
-  useEffect(() => {
-    setRequiredPoints(getRequiredPoints(courses));
-  }, [courses]);
+  setRequiredPoints(getRequiredPoints(courses));
 
   return (
     <p>
