@@ -1,5 +1,7 @@
 # UE Calculator
 
+Pour l'introduction à React liée au cours de Mr Tricarico, professeur à la HeH. Nous allons créyer ensemble une application permettant de calculer le nombre de point a faire pour passer une UE en connaissant les points du reste des AA. Pour un exemple fonctionnel, vous pouvez visiter [https://ue-calc.netlify.app/].
+
 ## Démarrez
 
 ### Installer Node et Yarn
@@ -42,3 +44,89 @@ Lors que l'installation est terminée vous pouvez lancer le projet avec `yarn st
 Tous ces exercices ont pour but de vous apprendre React, il ne sera donc pas nécéssaire de modifier les fichier `.css`.
 
 ### Exercice 1
+
+Si vous comparez avec l'exemple finalise ([https://ue-calc.netlify.app/]), vous remarquerez que vous n'avez pas la possiblité d'ajouter un cours à la liste.
+
+Allez dans le point d'entrée de notre application, c'est à dire le fichier `App.jsx` et analysez la façon dont les compostants `Results`et `CoursesList` sont utilisés. essayez d'appliquer cette méthode au composant manquant.
+
+<details>
+#### Notes
+
+Remarques qu'en React nous utilisons `className` au lieux de `class`. Avez vous une idée de la raison ?
+
+<details>
+En JavaScript le mot `class` est un mot clé utilisé pour déclarrer une classe, nous ne pouvons donc pas l'utiliser pour autre chose.
+</details>
+
+En React les composants commençant par des majuscules sont des composants React importé d'un fichier, tandis que les composant commencant par des minuscule sont des composant classique html.''
+
+</details>
+
+### Exercice 2
+
+Maintenant que le composant s'affiche, vous remarquerez que celui-ci n'est pas fonctionnel.
+
+Essayez de comprendre la ligne `const { addCourse, courses } = props` et de solutionner ce probleme.
+
+<details>
+#### Indice
+
+Les props (raccourci pour _properties_ ou propriétés) sont les "argument" qui sont passés au composants. De la même manière que vous pouvez passer un `class` à un composant html, en React vous pouvez passer tous types de propriétés à un composant
+
+</details>
+
+### Exercice 3
+
+Essayez maintenant d'ajouter un cours à votre liste, vous verrez qu'il s'affiche bien, sauf pour le nom. Investiguez dans le fichier `CourseCard.jsx` pour trouver la raison
+
+<details>
+#### Indice
+
+Inspirez vous de la façon dont `points` et `percents` sont importé dans le JSX.
+
+</details>
+
+### Exercice 4
+
+Le 1er cours s'affiche correctement, mais malheureusement il n'est pas possible d'en afficher plusieurs.
+Pour résoudre ceci nous allons devoir investiguer le fichier `CoursesList.jsx` ou nous voyont qu'en effet, le composant `CourseCard` n'est chargé qu'une seule fois.
+Cherchez une solution pour le charger un nombre de fois qui correspond à la longueur du tableau `courses` venant des props.
+
+<detail>
+#### Indice
+
+Comme pour l'ajout de la variable `name` dans l'exercice précédent, il est possible d'ajouter un tableau de composants directement dans le JSX. Pour celà l'utilisation de la fonction `.map` vous sera utile.
+
+Notez qu'il est préférable que chaque élément JSX du tableau possède une porpriété `key` unique, celà permet à React d'optimiser le nombre de rendus.
+</detail>
+
+### Exercice 5
+
+Il est enfin l'heure de faire fonctionner le résultat. Rendez-vous dans le fichier `Results.jsx`, en vous inspirant de la façon dont fonctionne le fonction `useState` dans `App.jsx` essayer de corriger la dernière erreur.
+
+<detail>
+#### Indices
+La valeur `() => {}` indique simplement une fonction vide, comme pourrais l'être `function() { }`
+
+La fonction `useState` retourne un tableau donc la première valeur est l'élément du state, et la seconde est la fonction permettant de le changer. En effet React à besoin qu'une fonction spécifique soit utilisée plutôt qu'un simple réassignement classique comme `requiredPoints = 18`, celà viens du faite que React à besoin de savoirs quand une variable du state est modifiéé pour pouvoir re-exécuter le rendu des compostants qui en dépendent (et uniquement de ceux-ci !!)
+</detail>
+
+### Exercice Bonus
+
+Hey oui tout fonctionne, mais si tu as encore du temps regarde comment utiliser `useEffect` pour que la ligne `setRequiredPoints(getRequiredPoints(courses));` ne s'exéute que si le contenu de `courses` à été modifié.
+
+## Mise en production.
+
+### Ajout sur GiHhub
+
+Maintenant que tout fonctionne, tu peux crée un nouveau repo sur GitHub et y _push_ ton projet. N'oublie pas de rajouter `--force` à la commane `git remote add origin` pour forcer git à utiliser ton repo et pas le notre.
+
+### Mise en place sur Netlify
+
+Netlify est une plateforme permettant de mettre en ligne gratuitement ton site web simplement en lui donnant accès au repo GitHub.
+
+Pour t'y inscrire vas sur [https://app.netlify.com/] et connecte toi avec GitHub. Tu peux ensuite cliquer sur _New Site from Git_ et lui donner accès au bon repo, Netlify va automatiquement détecter les réglages de ton projet, tu peux faire suivant. Attent ensuite quelques minutes que le site ai fini de compiler et il sera accessible au lien en haut de la page !
+
+<br/>
+
+Voilà ce petit tutoriel est fini, j'espère que tu te seras bien amusé et surtout que tu aura bien appris. Si tu as des question, des suggestion ou autre n'hésite pas à me contater à tim@mirahi.io ;)

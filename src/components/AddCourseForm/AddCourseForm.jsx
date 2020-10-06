@@ -1,7 +1,8 @@
 import { Formik } from "formik";
 import React, { useState } from "react";
 
-const AddCourseForm = ({ onSubmit, courses }) => {
+const AddCourseForm = (props) => {
+  const { addCourse, courses } = props;
   const [showForm, setShowForm] = useState(false);
 
   return (
@@ -14,7 +15,7 @@ const AddCourseForm = ({ onSubmit, courses }) => {
             { name, percent, points },
             { setSubmitting, resetForm }
           ) => {
-            onSubmit({
+            addCourse({
               name,
               percent: parseInt(percent),
               points: parseInt(points),
