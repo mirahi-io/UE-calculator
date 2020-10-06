@@ -118,6 +118,17 @@ La fonction `useState` retourne un tableau donc la première valeur est l'élém
 
 Hey oui tout fonctionne, mais si tu as encore du temps regarde comment utiliser `useEffect` pour que la ligne `setRequiredPoints(getRequiredPoints(courses));` ne s'exéute que si le contenu de `courses` à été modifié.
 
+Tu peux aussi essayer de décommenter le générateur de citation de Kanye dans `App.js` et essayer de comprendre pourquoi il agit aussi bizarrement.
+
+<details>
+<summary>Indice</summary>
+
+Il faut aussi utiliser `useEffect` car le générateur de citations change le _state_ de `quote` quand il va chercher une citation. Comme le composant `App` de `quote` et que celui-ci à été changé, il vas donc re-exéctuer le rendu de la page, ce qui vas re-exécuter la mise à jour de la citation, ce qui re-exécute le rendu de la page,...
+
+Je pense que t'as compris. Du coup en mettant la fonction dans un `useEffect` qui ne se re-exécute jamais, on peut avoir une nouvelle citation à chaque chargement de la page sans avoir une boucle infinie.
+
+</details>
+
 ## Mise en production.
 
 <details>
