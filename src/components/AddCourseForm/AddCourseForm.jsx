@@ -5,87 +5,79 @@ const AddCourseForm = (props) => {
   const { addCourse, courses } = props;
   const [showForm, setShowForm] = useState(false);
 
+  if (showForm) {
+    return <button onClick={() => setShowForm((value) => !value)}>+</button>;
+  }
+
   return (
-    <>
-      {showForm ? (
-        <Formik
-          initialValues={{ name: "", percent: "", points: "" }}
-          validate={validate(courses)}
-          onSubmit={(
-            { name, percent, points },
-            { setSubmitting, resetForm }
-          ) => {
-            addCourse({
-              name,
-              percent: parseInt(percent),
-              points: parseInt(points),
-            });
-            setSubmitting(false);
-            resetForm({});
-            setShowForm(false);
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-          }) => (
-            <form onSubmit={handleSubmit}>
-              <div>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Nom du cours"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.name}
-                />
-                <p>{errors.name && touched.name && errors.name}</p>
-              </div>
-              <div>
-                <input
-                  type="number"
-                  name="percent"
-                  placeholder="Pourcentage"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.percent}
-                />
-                <p>{errors.percent && touched.percent && errors.percent}</p>
-              </div>
-              <div>
-                <input
-                  type="number"
-                  name="points"
-                  placeholder="Points (/20)"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.points}
-                />
-                <p>{errors.points && touched.points && errors.points}</p>
-              </div>
-              <div className="horizontal">
-                <button type="submit" disabled={isSubmitting}>
-                  Ajouter
-                </button>
-                <button
-                  disabled={isSubmitting}
-                  onClick={() => setShowForm(false)}
-                >
-                  Annuler
-                </button>
-              </div>
-            </form>
-          )}
-        </Formik>
-      ) : (
-        <button onClick={() => setShowForm((value) => !value)}>+</button>
+    <Formik
+      initialValues={{ name: "", percent: "", points: "" }}
+      validate={validate(courses)}
+      onSubmit={({ name, percent, points }, { setSubmitting, resetForm }) => {
+        addCourse({
+          name,
+          percent: parseInt(percent),
+          points: parseInt(points),
+        });
+        setSubmitting(false);
+        resetForm({});
+        setShowForm(false);
+      }}
+    >
+      {({
+        values,
+        errors,
+        touched,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+        isSubmitting,
+      }) => (
+        <form onSubmit={handleSubmit}>
+          <div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Nom du cours"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.name}
+            />
+            <p>{errors.name && touched.name && errors.name}</p>
+          </div>
+          <div>
+            <input
+              type="number"
+              name="percent"
+              placeholder="Pourcentage"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.percent}
+            />
+            <p>{errors.percent && touched.percent && errors.percent}</p>
+          </div>
+          <div>
+            <input
+              type="number"
+              name="points"
+              placeholder="Points (/20)"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.points}
+            />
+            <p>{errors.points && touched.points && errors.points}</p>
+          </div>
+          <div className="horizontal">
+            <button type="submit" disabled={isSubmitting}>
+              Ajouter
+            </button>
+            <button disabled={isSubmitting} onClick={() => setShowForm(false)}>
+              Annuler
+            </button>
+          </div>
+        </form>
       )}
-    </>
+    </Formik>
   );
 };
 
